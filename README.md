@@ -39,10 +39,13 @@ php artisan vendor:publish --tag=laravel-assets --ansi --force
 // 生成laravel key
 php artisan key:generate --ansi
 
-// 安装dcat-admin
+// 安装以及发布dcat-admin
 php artisan admin:publish
-
 php artisan admin:install
+
+// 发布livewire
+php artisan livewire:publish --config
+php artisan livewire:publish --assets
 ```
 
 4.后台地址：域名/admin，使用用户名admin和密码admin登陆
