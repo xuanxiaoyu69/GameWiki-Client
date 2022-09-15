@@ -46,6 +46,28 @@ php artisan admin:install
 // 发布livewire
 php artisan livewire:publish --config
 php artisan livewire:publish --assets
+
+// 安装tailwind
+npm install -D tailwindcss postcss autoprefixer
+// 初始化配置文件（可以不执行）
+npx tailwindcss init -p
+
+执行以后需要配置 tailwind.config.js
+/** @type {import('tailwindcss').Config} */
+module.exports = {
+  content: [
+      "./resources/**/*.blade.php",
+      "./resources/**/*.js",
+      "./resources/**/*.vue",
+  ],
+  theme: {
+    extend: {},
+  },
+  plugins: [
+  ],
+}
+
+npm run dev
 ```
 
 4.后台地址：域名/admin，使用用户名admin和密码admin登陆
