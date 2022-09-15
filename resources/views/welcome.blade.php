@@ -7,6 +7,7 @@
         <title>Laravel</title>
 
         @livewireStyles
+        @vite('resources/css/app.css')
     </head>
     <body>
         @livewireScripts
